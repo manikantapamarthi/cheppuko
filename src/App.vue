@@ -1,6 +1,7 @@
 <script setup>
 import NavBar from "./components/NavBar.vue";
 import FramesContainer from "./components/FramesContainer.vue";
+import SearchContainer from "./components/SearchContainer.vue";
 </script>
 
 <template>
@@ -12,7 +13,7 @@ import FramesContainer from "./components/FramesContainer.vue";
       <FramesContainer/>
     </div>
     <div class="search-box">
-      
+      <SearchContainer/>
     </div>
   </div>
 </template>
