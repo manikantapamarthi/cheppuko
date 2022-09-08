@@ -4,24 +4,21 @@
 </script>
 <script>
   export default {
-    data() {
-      return {
-        counter: 0
-      }
-    }
+    props: ['counter', 'count'],
+
   }
 </script>
 <template>
   <div class="flex gap-3">
     <span class="p-input-icon-left">
       <i class="pi pi-search" />
-      <InputText type="text" v-model="value" placeholder="Search" />
+      <InputText type="text"  placeholder="Search" />
     </span>
     <span>
-      <Button label="skip" @click="counter++"/>
+      <Button label="skip" @click="counter"/>
     </span>
   </div>
-  <div>
-    <Button  v-for="n in counter">{{n}}</Button>
+  <div class="mt-2">
+    <Button  v-for="n in count" class="mr-2">{{n}}</Button>
   </div>
 </template>

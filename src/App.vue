@@ -2,6 +2,24 @@
 import NavBar from "./components/NavBar.vue";
 import FramesContainer from "./components/FramesContainer.vue";
 import SearchContainer from "./components/SearchContainer.vue";
+import { MAX_ATTEMPTS } from "./utils/constants";
+
+</script>
+<script>
+  export default {
+    data() {
+      return {
+        count: 0
+      }
+    },
+    methods: {
+      counter() {
+        if(this.count < MAX_ATTEMPTS) {
+          console.log(this.count++)
+        }
+      } 
+    }
+  }
 </script>
 
 <template>
@@ -13,7 +31,7 @@ import SearchContainer from "./components/SearchContainer.vue";
       <FramesContainer/>
     </div>
     <div class="search-box">
-      <SearchContainer/>
+      <SearchContainer :counter="counter" :count="this.count"/>
     </div>
   </div>
 </template>
