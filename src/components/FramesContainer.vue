@@ -1,6 +1,14 @@
+<script>
+import { re } from 'semver';
+
+  export default {
+    props: ['count']
+  }
+</script>
+
 <template>
   <div>
-    <img src="../../public/1c.png" alt="1stpic">
+    <img :src="(`../../public/${count+1}.png`)" alt="1stpic">
   </div>
 </template>
 

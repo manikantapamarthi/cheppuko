@@ -9,7 +9,7 @@
   }
 </script>
 <template>
-  <div class="flex gap-3">
+  <div class="flex gap-3 justify-content-center mb-4">
     <span class="p-input-icon-left">
       <i class="pi pi-search" />
       <InputText type="text"  placeholder="Search" />
@@ -18,7 +18,7 @@
       <Button label="skip" @click="counter"/>
     </span>
   </div>
-  <div class="mt-2">
-    <Button  v-for="n in count" class="mr-2">{{n}}</Button>
+  <div class="mt-2 text-center">
+    <Button  v-for="n in (count+1)" class="mr-2">{{n}}</Button>
   </div>
 </template>

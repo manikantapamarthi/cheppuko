@@ -14,8 +14,8 @@ import { MAX_ATTEMPTS } from "./utils/constants";
     },
     methods: {
       counter() {
-        if(this.count < MAX_ATTEMPTS) {
-          console.log(this.count++)
+        if(this.count < 4) {
+          this.count++
         }
       } 
     }
@@ -28,9 +28,9 @@ import { MAX_ATTEMPTS } from "./utils/constants";
       <NavBar/>
     </div>
     <div class="frames">
-      <FramesContainer/>
+      <FramesContainer :count="this.count"/>
     </div>
-    <div class="search-box">
+    <div class="search-box mt-4">
       <SearchContainer :counter="counter" :count="this.count"/>
     </div>
   </div>
